@@ -20,7 +20,7 @@ public class Assignment01Q03 {
             f1=f2;
             f2+=temp;
             if (i < x - 1)
-                System.out.print(" "); // Make sure we don't print a trailing space
+                System.out.print(" ");  // Make sure we don't print a trailing space
         }
         System.out.println();
         System.out.println("The number of odd numbers is: " + numOdd);
