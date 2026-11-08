@@ -1,13 +1,17 @@
 public class Assignment01Q05 {
+    private static int[] initilaizeDistanceArray(int n){
+        int[] dist = new int[n];
+        for(int v =0;v<n;v++){
+            dist[v] = -1;
+        }
+        return dist;
+    }
     public static int findShortestPath(int[][] m, int i, int j) {
         if(i==j){
             return 0;
         }
         int n = m.length;
-        int[] dist = new int[n]; // distance array, -1=not visited,o.w gets assigned based on when it's first met
-        for(int v =0;v<n;v++){
-            dist[v] = -1;
-        }
+        int[] dist = initilaizeDistanceArray(n);//distance array, -1=not visited,o.w gets assigned based on when it's first met
         int[] queue = new int[n];//enqueues the nodes it sees every level then dequeues the origin to continue traversal
         int head = 0;
         int tail = 0;
